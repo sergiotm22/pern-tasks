@@ -1,1 +1,5 @@
-console.log("Hello world 2");
+import app from "./app.js";
+import { PORT } from "./config.js";
+
+app.listen(PORT);
+console.log("Server on port", PORT);
