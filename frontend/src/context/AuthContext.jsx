@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
 
       return res.data;
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);
       }
@@ -38,7 +38,7 @@ export function AuthProvider({ children }) {
   const signup = async (data) => {
     try {
       const res = await axios.post("/signup", data);
-      console.log(res);
+      //console.log(res);
       setUser(res.data);
       setIsAuth(true);
 
