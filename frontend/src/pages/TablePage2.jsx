@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import TaskCard from "../components/tasks/TaskCard";
+import TaskTable from "../components/tasks/TaskTable";
 import { useTasks } from "../context/TaskContext";
 
 function TaskPage() {
@@ -17,11 +18,11 @@ function TaskPage() {
     );
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
-      {tasks.map((task) => (
-        <TaskCard task={task} key={task.id} />
-      ))}
-    </div>
+
+      tasks.map((task) => (
+        <TaskTable task={task} key={task.id} />
+      ))
+
   );
 }
 
